@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Password Protection Screen -->
+    <div class="password-screen" id="passwordScreen">
+        <div class="password-container">
+            <div class="floating-hearts">
+                <div class="heart">💕</div>
+                <div class="heart">💖</div>
+                <div class="heart">💝</div>
+                <div class="heart">💗</div>
+                <div class="heart">💕</div>
+            </div>
+            
+            <h1 class="password-title">My Love</h1>
+            <p class="password-subtitle">Enter our special moment ✨</p>
+            <!-- <p class="password-hint">
+                Remember the date when our hearts first connected?<br>
+                <span class="hint-text">The day we first met... 💕</span>
+            </p> -->
+            
+            <div class="password-input-group">
+                <input 
+                    type="password" 
+                    id="passwordInput" 
+                    class="password-input" 
+                    placeholder="Day we first meet"
+                    maxlength="4"
+                >
+            </div>
+            
+            <button class="password-btn" id="passwordBtn">
+                <span>Enter</span> 💖
+            </button>
+            
+            <div class="error-message" id="errorMessage">
+                That's not right, my love. Try again! 💕
+            </div>
+        </div>
+    </div>
+  
+    <nav class="navbar" id="navbar">
+        <div class="navbar-content">
+          <div class="logo">Logo</div>
+          <div class="nav-text">I love you forever</div>
+          <svg class="heart-icon" id="heartIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </div>
+      </nav>
+      
+      <!-- Love message popup that appears when heart is clicked -->
+      <div class="love-message" id="loveMessage">
+        <span style="display: inline-block;">I LOVE YOU Laxmi</span>
+      </div>
+
+
+
+    <section class="music-section">
+        <div class="content-wrapper">
+            <div class="text-content">               
+                <h1 class="main-title">
+                    EVERY MOMENT WITH YOU IS A <span class="pink-text">TREASURE</span> I WANT TO <span class="red-text">KEEP</span> FOREVER, <span class="forever">FOREVER AND EVER</span>
+                </h1>
+            </div>
+            <div class="player-container">
+                <div class="play-btn" id="playButton">
+                    <div class="play-icon" id="playIcon"></div>
+                    <div class="pause-icon" id="pauseIcon"></div>
+                </div>
+                <div class="play-text">play our song</div>
+            </div>
+        </div>
+
+        <!-- Using a placeholder audio file -->
+      <audio id="audioPlayer" loop>
+  <source src="Kaun_Tujhe_Armaan_Malik_Armaan_Malik.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+<!-- <div class="play-btn" id="playButton">
+  <div class="play-icon" id="playIcon"></div>
+  <div class="pause-icon" id="pauseIcon"></div>
+</div> -->
+ <div class="containerheart">
+            <div class="preloader">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="shadow"></div>
+          </div>
+    </section>
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+    
+    <!-- Twinkling Stars -->
+    <div class="stars" id="stars"></div>
+
+    <section class="poem-gallery-section">
+        <div class="gallery-header">
+            <h1 class="main-title">Whispers of the Heart</h1>
+            <p class="subtitle">"Loving you means holding you in every color of your soul."</p>
+        </div>
+
+        <div class="poem-categories">
+            <!-- Nature Poetry Category -->
+            <div class="poem-category" data-category="nature">
+                <div class="poem-category-bg"></div>
+                <div class="poem-category-overlay">
+                    <div class="category-ornament">🌿</div>
+                    <div class="romantic-quote">"In your smile, I find my sunshine; in your laughter, my melody. When you’re happy, the whole world feels right."</div>
+                    <h3 class="poem-category-title">Happiness 😊</h3>
+                    <p class="poem-category-subtitle">Where earth's beauty meets poetic soul</p>
+                    <!-- <span class="poem-count">12 Poems</span> -->
+                    <div class="decorative-line"></div>
+                </div>
+                <div class="sparkle" style="top: 20%; left: 80%; animation-delay: 0s;"></div>
+                <div class="sparkle" style="top: 70%; left: 20%; animation-delay: 0.5s;"></div>
+            </div>
+
+            <!-- Love Poetry Category -->
+            <div class="poem-category" data-category="love">
+                <div class="poem-category-bg"></div>
+                <div class="poem-category-overlay">
+                    <div class="category-ornament">🥀</div>
+                    <div class="romantic-quote">"Even on your saddest days, I’ll be your soft place to fall. Let my love be the umbrella that shelters you from every storm."</div>
+                    <h3 class="poem-category-title">Sadness 😢</h3>
+                    <p class="poem-category-subtitle">"Where tears become rain, and love still grows"</p>
+                    <!-- <span class="poem-count">18 Poems</span> -->
+                    <div class="decorative-line"></div>
+                </div>
+                <div class="sparkle" style="top: 30%; left: 70%; animation-delay: 0.2s;"></div>
+                <div class="sparkle" style="top: 60%; left: 30%; animation-delay: 0.7s;"></div>
+            </div>
+
+            <!-- Urban Poetry Category -->
+            <div class="poem-category" data-category="urban">
+                <div class="poem-category-bg"></div>
+                <div class="poem-category-overlay">
+                    <div class="category-ornament">💢</div>
+                    <div class="romantic-quote">"Even when fire burns in your eyes, my love stays gentle like rain — not to fight you, but to cool your heart with calm."</div>
+                    <h3 class="poem-category-title">Anger 😠</h3>
+                    <p class="poem-category-subtitle">Where storms rise, but hearts refuse to fall</p>
+                    <!-- <span class="poem-count">15 Poems</span> -->
+                    <div class="decorative-line"></div>
+                </div>
+                <div class="sparkle" style="top: 25%; left: 75%; animation-delay: 0.3s;"></div>
+                <div class="sparkle" style="top: 65%; left: 25%; animation-delay: 0.8s;"></div>
+            </div>
+
+            <!-- Spiritual Poetry Category -->
+            <div class="poem-category" data-category="spiritual">
+                <div class="poem-category-bg"></div>
+                <div class="poem-category-overlay">
+                    <div class="category-ornament">🕊️</div>
+                    <div class="romantic-quote">"When fear knocks, I’ll hold your hand tighter. You’ll never have to face the dark alone—as long as I breathe, I’ll be your light."</div>
+                    <h3 class="poem-category-title">Fear 😨</h3>
+                    <p class="poem-category-subtitle">Where shadows tremble, but love lights the way</p>
+                    <!-- <span class="poem-count">10 Poems</span> -->
+                    <div class="decorative-line"></div>
+                </div>
+                <div class="sparkle" style="top: 35%; left: 65%; animation-delay: 0.4s;"></div>
+                <div class="sparkle" style="top: 55%; left: 35%; animation-delay: 0.9s;"></div>
+            </div>
+        </div>
+        
+ <section class="photos-section">
+        <div class="floating-hearts">
+            <div class="heart">💕</div>
+            <div class="heart">💖</div>
+            <div class="heart">💝</div>
+            <div class="heart">💗</div>
+            <div class="heart">💘</div>
+            <div class="heart">💞</div>
+            <div class="heart">💓</div>
+            <div class="heart">💕</div>
+        </div>
+
+        <div class="section-title">
+            <h2>Our Beautiful Moments</h2>
+            <p>Every picture tells a story of our love ✨</p>
+        </div>
+
+        <div class="photos-container">
+            <div class="photo-card">
+                <img src="./Image/WhatsApp Image 2025-06-05 at 19.25.29_e9c5847f.jpg" alt="Beautiful Moment 1">
+                <div class="photo-overlay">
+                    <div class="photo-title">First Date</div>
+                    <div class="photo-caption">Our first Date, filled with nervous smiles and endless possibilities</div>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="./Image/WhatsApp Image 2025-06-05 at 19.23.15_915da5c8.jpg" alt="Beautiful Moment 2">
+                <div class="photo-overlay">
+                    <div class="photo-title">Sunset Together</div>
+                    <div class="photo-caption">Watching the world paint the sky while I fell deeper in love with you</div>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="./Image/WhatsApp Image 2025-06-05 at 19.18.05_d161d38b.jpg" alt="Beautiful Moment 3">
+                <div class="photo-overlay">
+                    <div class="photo-title">Exploring</div>
+                    <div class="photo-caption">Exploring new places daily</div>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="./Image/WhatsApp Image 2025-06-05 at 19.12.22_daca2b87.jpg" alt="Beautiful Moment 4">
+                <div class="photo-overlay">
+                    <div class="photo-title">Coffee & Laughs</div>
+                    <div class="photo-caption">Simple moments that became precious memories in our love story</div>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="./Image/WhatsApp Image 2025-06-05 at 19.18.06_47bd4f34.jpg" alt="Beautiful Moment 5">
+                <div class="photo-overlay">
+                    <div class="photo-title">Adventure Time</div>
+                    <div class="photo-caption">Exploring the world together, hand in hand, heart to heart</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+
+       
+          
+
+
+
+
+
+          
+        
+        <div class="container hero-container2">
+          <div class="hero-text2">
+            <h1>Songs & Echoes of the Heart</h1>
+            <div class="location">(Teri aakho ke siwa iss duniya mei rakh-ha kya hai)</div>
+          </div>
+          
+          <div class="hero-image2">
+            <!-- <img src="/api/placeholder/1000/500" alt="Two silhouettes against sunset" /> -->
+          </div>
+          
+          <div class="hero-description2">
+            Laxmi, You are the most beautiful part of my life my sunshine on cloudy days and my peace in every storm. Just hearing your voice or seeing your smile makes everything feel right. Loving you is the easiest thing I've ever done, and I’m so grateful every day that you’re mine. ❤️    
+             </div>
+          
+          <div class="scroll-prompt">
+            <span class="arrow-down">↓</span>
+            <span>Scroll Down</span>
+          </div>
+        </div>
+
+
+
+         <div class="container">
+    <div class="section-header">
+      <span class="icon">♥</span>
+      <span>(Tum meri aakhri mohabbat hoo)</span>
+    </div>
+    
+    <div class="services">
+      <div class="service">
+        <h3 class="service-title">Soak My Soul Into Yours.</h3>
+        <p class="service-description">
+          <span class="quote">"Ho.. Apne hi rang mein mujhko rang de
+              Dheeme dheeme rang mein mujhko rang de
+              Saundhe-saundhe rang mein mujhko rang de
+              Rang de na, rang de na, rang de na..
+              "</span>
+              
+              Let your shades flow through me,
+              Color me in the hues of you.
+              I want to be yours completely,
+              To carry your colors in my soul,
+              To be soaked in your spirit.
+              I surrender myself to you.
+        </p>
+        <div class="music-controls">
+          <div class="play-button" data-audio="rangrez" data-start-time="0" data-end-time="300">▶</div>
+          <span class="music-title">O Rangrez - </span>
+        </div>
+      </div>
+      
+      <div class="service">
+        <h3 class="service-title">First Love’s Dream.</h3>
+        <p class="service-description">
+          <span class="quote">
+              "Pehla nasha, pehla khumaar
+      Naya pyaar hai, naya intezaar"
+          </span>
+    That first intoxication of love,  
+      The tender wait for your smile,  
+      When every breath whispers your name,  
+      And the world feels brand new with you in it.  
+      My heart races with the magic of our first love.
+        </p>
+        <div class="music-controls">
+          
+          <div class="play-button" data-audio="pehela-nasha" data-start-time="10" data-end-time="330">▶</div>
+          <span class="music-title">pehela-nasha </span>
+        </div>
+      </div>
+      
+      <div class="service">
+        <h3 class="service-title">Magical Connection.</h3>
+        <p class="service-description">
+          <span class="quote">"Raabta, raabta, raabta"</span>
+ A connection deeper than words,  
+      Souls entwined beyond time and space,  
+      Meeting you was destiny’s gentle touch,  
+      Binding hearts forever in love.
+        </p>
+        <div class="music-controls">
+          <div class="play-button" data-audio="raabata" data-start-time="0" data-end-time="350">▶</div>
+          <span class="music-title">Heer</span>
+        </div>
+      </div>
+      
+      <div class="service">
+        <h3 class="service-title">Life Begins With You</h3>
+        <p class="service-description">
+          <span class="quote">"Jeene laga hoon, pehle se zyada"</span>
+       I’ve begun to truly live,  
+      Because you’ve come into my life,  
+      Turning ordinary days into something beautiful,  
+      Filling my heart with endless joy.
+        </p>
+        <div class="music-controls">
+          <div class="play-button" data-audio="jeene-laga-hoon" data-start-time="0" data-end-time="340">▶</div>
+          <span class="music-title">jeene-laga-hoon</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Additional Content (Hidden by Default) -->
+    <div class="additional-content">
+      <div class="services">
+        <div class="service">
+          <h3 class="service-title">Nothing Feels Right Without You</h3>
+          <p class="service-description">
+            <span class="quote">"Tera na hoke bhi kuch lagta hai"</span>
+           Even when you’re not mine,  
+      Everything feels incomplete,  
+      Like a missing piece of my soul,  
+      I’m tethered to you beyond reason.
+          </p>
+          <div class="music-controls">
+            <div class="play-button" data-audio="tera-na-hoke" data-start-time="0" data-end-time="350">▶</div>
+            <span class="music-title">tera-na-hoke</span>
+          </div>
+        </div>
+        
+        <div class="service">
+          <h3 class="service-title">Unspoken Love</h3>
+          <p class="service-description">
+            <span class="quote">"Tera hone laga hoon, khone laga hoon"</span>
+
+          Slowly becoming yours,  
+      Losing myself in your love,  
+      Every moment draws me closer,  
+      To a love I never want to end.
+
+
+          </p>
+          <div class="music-controls">
+            <div class="play-button" data-audio="tujh-mein" data-start-time="0" data-end-time="340">▶</div>
+            <span class="music-title">tujh-mein</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Listen More Button -->
+    <div class="listen-more-container" >
+      <button class="listen-more-btn" >
+        Listen More 
+      </button>
+    </div>
+    
+
+      
+    
+    <!-- Audio elements -->
+    <audio id="rangrez" src="128-O Rangrez - Bhaag Milkha Bhaag 128 Kbps.mp3"></audio>
+    <audio id="pehela-nasha" src="128-Pehla Nasha - Jo Jeeta Wohi Sikandar 128 Kbps.mp3"></audio>
+    <audio id="raabata" src="128-Raabta - Agent Vinod 128 Kbps.mp3"></audio>
+    <audio id="jeene-laga-hoon" src="Jeene Laga Hoon(KoshalWorld.Com).mp3"></audio>
+    <audio id="tera-na-hoke" src="Apna Bana Le - Bhediya _ Varun Dhawan, Kriti Sanon_ Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya.mp3"></audio>
+    <audio id="tujh-mein" src="Nazm Nazm - Lyrical _ Bareilly Ki Barfi _ Rajkummar Rao, Ayushmann Khurrana, Kriti Sanon _ Arko.mp3"></audio>
+  </div>
+
+
+
+
+          <footer class="footer">
+            <div class="quote">"With you, every heartbeat is a love story."</div>
+            <div class="beloved-name">Laxmi</div>
+            <div class="made-with-love">
+                Made with 
+                <div class="heart-container">
+                    <span class="heart"></span>
+                    <span class="glow"></span>
+                </div>
+                Love
+            </div>
+        </footer>
+
+
+    
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>
